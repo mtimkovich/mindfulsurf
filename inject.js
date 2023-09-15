@@ -3,4 +3,4 @@ function wait(ms) {
     while (performance.now() - start < ms);
 }
 
-wait(2000);
+wait(3000);

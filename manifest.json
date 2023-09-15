@@ -1,6 +1,6 @@
 {
-  "name": "slow down",
-  "version": "0",
+  "name": "Mindfulsurf",
+  "version": "0.1",
   "manifest_version": 3,
   "minimum_chrome_version": "103.0",
   "content_scripts": [

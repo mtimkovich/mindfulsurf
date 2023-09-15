@@ -1,6 +1,10 @@
-# slow-down
+# Mindfulsurf
 
-A wonderful Chrome extension that causes every page to load 2 seconds slower.
+> Dear friend, please enjoy three in and out-breaths wile we download the app content.
+
+\- [Plum Village App][plum] loading screen
+
+Mindfulsurf enables you to to add a small delay to certain sites, namely social media. Google research found that 53% of users give up on site if it takes more than 3 seconds to load[<sup>1</sup>][data]. Do you care enough to view your site that you're willing to wait 3 seconds?
 
 ## Installation
 
@@ -10,10 +14,13 @@ A wonderful Chrome extension that causes every page to load 2 seconds slower.
 
 ## TODO
 
-- [ ] Update readme and description to give it a mindfulness angle spin
+- [x] Update readme and description to give it a mindfulness angle spin
 - [ ] Add options page to customize timeout and blacklist sites
 - [ ] Add icons
 
 ## Author
 
 Max Timkovich
+
+[plum]: https://plumvillage.app/
+[data]: https://blog.google/products/admanager/the-need-for-mobile-speed/
