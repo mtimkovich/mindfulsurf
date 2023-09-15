@@ -1,8 +1,13 @@
 {
   "name": "Mindfulsurf",
-  "version": "0.1",
+  "version": "0.1.0",
+  "homepage_url": "https://github.com/mtimkovich/mindfulsurf",
   "manifest_version": 3,
-  "minimum_chrome_version": "103.0",
+  "minimum_chrome_version": "95",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
   "content_scripts": [
     {
       "matches": ["*://*/*"],
