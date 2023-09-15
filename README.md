@@ -4,7 +4,7 @@
 
 \- [Plum Village App][plum] loading screen
 
-Mindfulsurf enables you to to add a small delay to certain sites, namely social media. Google research found that 53% of users give up on site if it takes more than 3 seconds to load[<sup>1</sup>][data]. Do you care enough to view your site that you're willing to wait 3 seconds?
+Mindfulsurf is a Chrome extension that allows you to to add a small delay to certain sites. Google research found that 53% of users give up on site if it takes more than 3 seconds to load[<sup>1</sup>][data]. Do you care enough to view your site that you're willing to wait 3 seconds?
 
 ## Installation
 
