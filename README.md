@@ -1,6 +1,6 @@
 # :surfer: Mindfulsurf
 
-> Dear friend, please enjoy three in and out-breaths wile we download the app content.
+> Dear friend, please enjoy three in and out-breaths while we download the app content.
 
 \- [Plum Village App][plum] loading screen
 
