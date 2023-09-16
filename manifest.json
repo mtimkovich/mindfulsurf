@@ -5,7 +5,9 @@
   "manifest_version": 3,
   "minimum_chrome_version": "95",
   "icons": {
-    "128": "icon128.jpeg"
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   },
   "options_ui": {
     "page": "options.html",
