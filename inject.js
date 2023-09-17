@@ -5,6 +5,10 @@ function wait(ms) {
 
 function isAffected(sites) {
   for (const site of sites) {
+    if (site.length === 0) {
+      continue;
+    }
+
     let match = site.replace('.', '\\.');
     match = match.replace('*', '.*');
     const regex = new RegExp(match, 'i');
@@ -22,6 +26,11 @@ function main(config) {
     return;
   }
 
+  // Don't mess with chrome:// urls.
+  if (location.href.startsWith('chrome://')) {
+    return;
+  }
+
   if (!isAffected(config.sites)) {
     return;
   }
@@ -34,3 +43,4 @@ chrome.storage.sync.get({
   delay: 3,
   sites: [],
 }, main);
+
