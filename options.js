@@ -1,3 +1,11 @@
+function disableFields(checked) {
+  const delay = document.getElementById('delay');
+  const sites = document.getElementById('sites');
+
+  delay.disabled = !checked;
+  sites.disabled = !checked;
+}
+
 // Saves options to chrome.storage.
 function save_options() {
   const enabled = document.getElementById('enabled').checked;
@@ -14,7 +22,7 @@ function save_options() {
     status.textContent = 'Options saved.';
     setTimeout(() => {
       status.textContent = '';
-    }, 1000);
+    }, 2000);
   });
 }
 
@@ -26,11 +34,17 @@ function restore_options() {
     delay: 3,
     sites: [],
   }, config => {
-    document.getElementById('enabled').checked = config.enabled;
+    document.getElementById('enabled').value = config.enabled;
     document.getElementById('delay').value = config.delay;
     document.getElementById('sites').value = config.sites.join('\n');
+
+    disableFields(config.enabled)
   });
 }
 
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click', save_options);
+document.getElementById('enabled').addEventListener('change', e => {
+  disableFields(e.target.checked);
+});
+
