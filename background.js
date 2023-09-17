@@ -6,17 +6,13 @@ chrome.action.onClicked.addListener(_ => {
 
 function setTitle(enabled) {
   let action = 'Enable';
-  if (enabled) {
-    action = 'Disable';
-  }
+  if (enabled) action = 'Disable';
 
   chrome.action.setTitle({title: `${action} Mindfulsurf`});
 }
 
 chrome.storage.sync.onChanged.addListener(changes => {
-  if (changes.enabled === undefined) {
-    return;
-  }
+  if (changes.enabled === undefined) return;
 
   setTitle(changes.enabled.newValue);
 });
