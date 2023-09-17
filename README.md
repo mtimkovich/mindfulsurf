@@ -17,7 +17,7 @@ The extension is disabled by default. In the extension's options you can:
 
 ## Installation
 
-1. Code → Download ZIP
+1. Code → Download ZIP or `git clone`
 2. Extract
 3. Manage extensions → Load unpacked
 
