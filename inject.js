@@ -6,7 +6,7 @@ function sleep(ms) {
 function siteMatch(str) {
   if (str === '') return false;
 
-  let match = str.replace('.', '\\.');
+  const match = str.replace('.', '\\.');
   const regex = new RegExp(match, 'i');
   return location.host.match(regex) !== null;
 }
