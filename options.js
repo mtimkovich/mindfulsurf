@@ -34,7 +34,7 @@ function restore_options() {
     delay: 3,
     sites: [],
   }, config => {
-    document.getElementById('enabled').value = config.enabled;
+    document.getElementById('enabled').checked = config.enabled;
     document.getElementById('delay').value = config.delay;
     document.getElementById('sites').value = config.sites.join('\n');
 
