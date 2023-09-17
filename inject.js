@@ -3,25 +3,17 @@ function sleep(ms) {
   while (performance.now() - start < ms);
 }
 
-function glob(str) {
+function siteMatch(str) {
+  if (str === '') return false;
+
   let match = str.replace('.', '\\.');
-  return new RegExp(match, 'i');
-}
-
-function isAffected(sites) {
-  for (const site of sites) {
-    if (site.length === 0) continue;
-
-    const regex = glob(site)
-    if (location.host.match(regex) !== null) return true;
-  }
-
-  return false;
+  const regex = new RegExp(match, 'i');
+  return location.host.match(regex) !== null;
 }
 
 function main(config) {
   if (!config.enabled) return;
-  if (!isAffected(config.sites)) return;
+  if (!config.sites.some(siteMatch)) return;
 
   sleep(config.delay * 1000);
 }
