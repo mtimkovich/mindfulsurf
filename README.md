@@ -4,7 +4,7 @@
 
 \- [Plum Village App][plum] loading screen
 
-Mindfulsurf is a Chrome extension that allows you to to add a small delay (3 seconds by default) to certain sites. The goal is to not block, but to minorly inconvenience visiting common time-wasting sites (e.g. social media). It can be used as a gentle in-browser reminder to come back to your breath.
+Mindfulsurf is a Chrome extension that allows you to to add a small delay (3 seconds by default) to certain sites. The goal is to not block, but to minorly inconvenience the act of visiting common time-wasting sites (e.g. social media, shopping). It can serve as a gentle in-browser reminder to come back to your breath.
 
 ## Usage
 
