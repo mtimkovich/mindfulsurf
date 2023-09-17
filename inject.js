@@ -8,7 +8,7 @@ function siteMatch(str) {
 
   const match = str.replace('.', '\\.');
   const regex = new RegExp(match, 'i');
-  return location.host.match(regex) !== null;
+  return location.host.test(regex);
 }
 
 function main(config) {
