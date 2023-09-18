@@ -38,7 +38,7 @@ function restore_options() {
     document.getElementById('delay').value = config.delay;
     document.getElementById('sites').value = config.sites.join('\n');
 
-    disableFields(config.enabled)
+    disableFields(config.enabled);
   });
 }
 
