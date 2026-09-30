@@ -20,6 +20,12 @@ function delay(ms) {
     'font:24px/1.4 "Cormorant Garamond", serif;color:#9a9a9a';
   overlay.textContent = MESSAGES[Math.floor(Math.random() * MESSAGES.length)];
 
+  // Lock page scrolling while the overlay is up. The style lives inside the
+  // overlay so it's removed (and re-attached) together with it.
+  const lock = document.createElement('style');
+  lock.textContent = 'html, body { overflow: hidden !important; }';
+  overlay.appendChild(lock);
+
   const attach = () => {
     if (!overlay.isConnected) document.documentElement.appendChild(overlay);
   };
@@ -29,12 +35,27 @@ function delay(ms) {
   const observer = new MutationObserver(attach);
   observer.observe(document, {childList: true, subtree: true});
 
+  // Keep media from playing behind the overlay (e.g. YouTube autoplay). The
+  // play event doesn't bubble, so listen in the capture phase.
+  const paused = new Set();
+  const pauseMedia = e => {
+    paused.add(e.target);
+    e.target.pause();
+  };
+  document.addEventListener('play', pauseMedia, true);
+
   setTimeout(() => {
     observer.disconnect();
+    document.removeEventListener('play', pauseMedia, true);
     overlay.remove();
+    // Resume whatever we interrupted.
+    paused.forEach(media => media.play().catch(() => {}));
   }, ms);
 }
 
+// Returns true if the current page is on the given domain or any subdomain of
+// it, e.g. "reddit.com" matches reddit.com and old.reddit.com, but not
+// notreddit.com. Matching is on whole domain labels, not substrings.
 function siteMatch(str) {
   // Accept bare domains as well as pasted URLs.
   const site = str.trim().toLowerCase()
