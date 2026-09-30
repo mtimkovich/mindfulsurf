@@ -1,6 +1,6 @@
 {
   "name": "Mindfulsurf",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Max Timkovich",
   "description": "Make space for mindfulness while surfing the web 🏄️",
   "homepage_url": "https://github.com/mtimkovich/mindfulsurf",
@@ -15,7 +15,9 @@
     "page": "options.html",
     "open_in_tab": false
   },
-  "action": {},
+  "action": {
+    "default_title": "Mindfulsurf settings"
+  },
   "background": {
     "service_worker": "background.js"
   },

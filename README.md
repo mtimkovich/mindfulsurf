@@ -19,13 +19,6 @@ The extension is disabled by default. In the options you can:
 2. Extract
 3. Manage extensions → Load unpacked
 
-## TODO
-
-- [x] Update README and description to give it a mindfulness angle
-- [x] Add options page to customize timeout and blacklist sites
-- [x] Add icons
-- [x] Improve site matching code
-
 ## Author
 
 Max Timkovich
